@@ -1,0 +1,66 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "myDatabase";
+
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
+<html>
+<head>
+<title> Inventory Management System</title>
+<link rel="stylesheet" href="login.css"
+</head>
+<form class="box" action="../html/test.html" method="post">
+ <h1>Login<h1>
+ <input type="text" name="username" placeholder="Username">
+ 
+ <input type="password" name="password" placeholder="password">
+ <input type="submit" name="submit" value="Login">
+ <p>New user?<a href="signup.html">SignUp</a></p>
+</form>
+
+<?php
+$username = $_POST['username'];
+$password = $_POST['password'];
+$sql = "SELECT * FROM Admin WHERE username='$username'and password='$password'";
+$result = mysqli_query($conn, $sql);
+if(isset($_GET['submit']))
+{
+
+
+
+if(!mysqli_num_rows($result))
+{
+   
+     echo "wrong username or password";
+   echo '<script>alert("Welcome to Geeks for Geeks")</script>'; 
+    
+    
+}
+else {
+    
+    
+      session_start();
+    $_SESSION['myDaB']='true';
+    header('location:../html/home.html');
+
+          }
+
+
+}
+
+mysqli_close($conn);
+?>
+
+
+</html>
+

@@ -1,0 +1,85 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/06281ad56a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>sell Item</title>
+</head>
+
+<body style="background-color:powderblue;">
+<div class="container-fluid p-0">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <i class="fa-solid fa-warehouse fa-2x"></i>
+  <a class="navbar-brand" href="#">Inventory Managemet System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="mr-auto"></div>
+    <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="../html/home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../php/stockdisplay.php">Stock</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../html/purchase.html">Purchase</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="../php/salemenu.php">Sales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../html/report.html">Report</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../php/logout.php">Logout</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+    <!-- Sell form -->
+    <div class="container my-5">
+    <form method="post" action="../php/sale.php">
+
+    <div class="mb-3">
+    <label >Product ID</label>
+    <input type="text" class="form-control" placeholder="Enter Product Id" name="itemid" >
+    
+  </div>
+  <div class="mb-3">
+    <label >Product Name</label>
+    <input type="text" class="form-control" placeholder="Enter Product name" name="productname" >
+    
+  </div>
+  <div class="mb-3">
+  <label >Product Descriptiom</label>
+  <textarea class="form-control"  rows="3" placeholder="Write Product Description" name="description"></textarea>
+</div>
+
+   <div class="mb-3">
+    <label >Unit</label>
+    <input type="text" class="form-control" placeholder="total unit" name="unit" >
+   </div> 
+   <div class="mb-3">
+    <label >Unit Price</label>
+    <input type="text" class="form-control" placeholder="Per unit selling price" name="unitprice" >
+   </div> 
+  <button type="submit" class="btn btn-primary" name="sell">sell</button>
+</form>
+</div>
+
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>

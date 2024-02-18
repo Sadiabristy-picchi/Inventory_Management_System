@@ -1,0 +1,23 @@
+
+<html>
+<head>
+<title> Inventory Management System</title>
+<link rel="stylesheet" href="login.css"
+</head>
+<form class="box" action="../php/login.php" method="post">
+ <h1>Login<h1>
+ <?php 
+ if(isset($_GET['error'])){ ?>
+ <script>alart("hi");</script>
+  <?php }?>
+ <input type="text" name="username" placeholder="Username">
+ 
+ <input type="password" name="password" placeholder="password">
+ <input type="submit" name="submit" value="Login">
+ <p>New user?<a href="signup.html">SignUp</a></p>
+</form>
+
+
+
+</html>
+
